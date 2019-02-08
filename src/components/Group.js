@@ -1,40 +1,14 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-
 import './Group.scss';
 
 class Group extends Component {
   calculateDate(msgDateISO) {
-    // const localTime = moment(messages[groups[id].last_msg_id].sent_at).format();
-    // console.log('date',date);
-    // var now = new Date();
-    
-    
-    // const dateISO = new Date().toISOString();
-    // new Date(msgDateISO).getTime();
-
-    // const msgDateMs = new Date(msgDateISO).getTime();
-    // console.log('뺀거', nowMs, msgDateMs, nowMs - msgDateMs, aDay);
-
-    // if (nowMs - msgDateMs < aDay) {
-    //   return moment(msgDateISO).format().slice(11, 16);
-    // }
-
-    const nowISO = new Date().toISOString();
-    const today = moment(nowISO).format().slice(0, 10);
-    console.log('today',today);
-    
-    const nowMs = new Date().getTime();
-    const aDay = 24 * 60 * 60 * 1000;
-    const yesterdayMs = nowMs - aDay;
-    var yesterday = moment(new Date(yesterdayMs).toISOString()).format().slice(0, 10);
-    console.log('yesterday', yesterday);
-
-    var msgDate = moment(msgDateISO).format().slice(0, 10);
-    console.log('msgDate',msgDate);
-
+    const yesterdayMs = new Date().getTime() - (24 * 60 * 60 * 1000);
+    const yesterday = moment(new Date(yesterdayMs).toISOString()).format().slice(0, 10);
+    const today = moment(new Date().toISOString()).format().slice(0, 10);    
+    const msgDate = moment(msgDateISO).format().slice(0, 10);
     const msgLocalDate = moment(msgDateISO).format();
-
     if (msgDate === today) {
       return msgLocalDate.slice(11, 16);
     } else if (msgDate === yesterday) {
@@ -44,7 +18,6 @@ class Group extends Component {
     } else {
       return `${msgLocalDate.slice(0, 4)}. ${+msgLocalDate.slice(5, 7)}. ${+msgLocalDate.slice(8, 10)}`;
     }
-    
   }
 
   render() {
@@ -60,7 +33,6 @@ class Group extends Component {
           <div>{groupList.last_msg_text}</div>
         </div>
         <div className="Group-date">
-          {/* {groupList.last_msg_sent_at} */}
           {this.calculateDate(groupList.last_msg_sent_at)}
         </div>
       </div>

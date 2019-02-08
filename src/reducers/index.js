@@ -16,8 +16,6 @@ export default (state = initialState, action) => {
         groupList[id].group_photo = groups[id].group_photo;
         groups[id].last_msg_id = Math.max(...groups[id].message_id);
         groupList[id].last_msg_text = messages[groups[id].last_msg_id].text;
-
-        // const localTime = moment(messages[groups[id].last_msg_id].sent_at).format();
         groupList[id].last_msg_sent_at = messages[groups[id].last_msg_id].sent_at;
         groupOrder.push([id, groups[id].last_msg_id]);
       }

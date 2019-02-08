@@ -7,21 +7,20 @@ import './App.scss';
 
 class App extends Component {
   componentDidMount() {
-    console.log('app did mount');
-    // const data = {groups: {}, messages: {}, users: {}};
-    // localStorage.setItem('data', JSON.stringify(data));
-    this.getData();
+    if (!localStorage.getItem('data')) {
+      this.getData();
+    }
   }
 
   getData() {
     // localstorage 비어있으면 
-    // if (!localStorage.getItem('data')) {
+    if (!localStorage.getItem('data')) {
       fetch('data/data.json')
       .then(res => res.json())
       .then(data => {
         this.setData(data);
       });
-    // }
+    }
   }
 
   setData(data) {
@@ -73,7 +72,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div className="App"> 
           <Switch>
             <Route exact path="/" component={ChatList} />
             <Route path="/:group_id" component={MessageList} />

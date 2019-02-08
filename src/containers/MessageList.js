@@ -12,4 +12,7 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(GroupChat);
+export default connect(
+  mapStateToProps, 
+  mapDispatchToProps
+)(GroupChat);

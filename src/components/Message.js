@@ -1,10 +1,8 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import './Message.scss';
 
 class Message extends Component {
   changeTimeForm(date) {
-    // console.log('time', date);
-    // let time = date.slice(11, 16);
     let hours = date.slice(11, 13);
     let minutes = date.slice(14, 16);
     if (hours < 13) {
@@ -16,7 +14,6 @@ class Message extends Component {
   }
 
   render() {
-    // console.log('aaaaaa',this.props);
     const { messageInfo, userInfo, userCount } = this.props;
     
     return (

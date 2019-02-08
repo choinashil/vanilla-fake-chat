@@ -14,20 +14,10 @@ class GroupChat extends Component {
   }
 
   componentDidMount() {
-    // console.log('mount', this.props.groupIds);
     this.props.showGroupChat(this.groupId);
   }
 
-  componentDidUpdate(prevProps) {
-    // console.log('update props', this.props);
-    // if (prevProps.groupIds !== this.props.groupIds) {
-    //   if (this.props.groupIds.includes(this.props.match.params.group_id)) {
-    //     this.groupId = this.props.match.params.group_id;
-    //     console.log('groupIdd',this.groupId);
-    //     this.props.showGroupChat(this.groupId);
-    //   }
-    // }
-
+  componentDidUpdate() {
     this.groupChat.current.scrollTop = this.groupChat.current.scrollHeight;
   }
 
@@ -96,12 +86,7 @@ class GroupChat extends Component {
             onChange={this.changeInput.bind(this)}
             onKeyDown={this.setInput.bind(this)}
           />
-          <button 
-            type="button"
-            // onClick={this.setInput.bind(this)}
-          >
-            보내기
-          </button>
+          <button type="button">보내기</button>
         </div>
       </div>
     );

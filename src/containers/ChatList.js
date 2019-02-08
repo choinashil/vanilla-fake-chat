@@ -2,15 +2,11 @@ import { connect } from 'react-redux';
 import { showGroupList } from '../actions';
 import GroupList from '../components/GroupList';
 
-const mapStateToProps = ({ groupList, groupOrder }) => ({
-  groupList, 
-  groupOrder
-});
+const mapStateToProps = state => state;
 
 const mapDispatchToProps = dispatch => ({
-  getData: () => {
+  showGroupList: () => {
     const data = JSON.parse(localStorage.getItem('data'));
-    console.log('dataa',data);
     const { groups, messages, users } = data;
     dispatch(showGroupList(groups, messages, users));
   }

@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
-// import logger from 'redux-logger';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-// import rootReducer from './reducers';
 import reducer from './reducers';
-import './index.scss';
 import App from './components/App';
+import './index.scss';
 
 const store = createStore(reducer);
 
