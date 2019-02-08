@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ChatList from '../containers/ChatList';
 import MessageList from '../containers/MessageList';
 import NotFound from '../components/NotFound';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 
 class App extends Component {
@@ -13,14 +13,11 @@ class App extends Component {
   }
 
   getData() {
-    // localstorage 비어있으면 
-    if (!localStorage.getItem('data')) {
-      fetch('data/data.json')
-      .then(res => res.json())
-      .then(data => {
-        this.setData(data);
-      });
-    }
+    fetch('data/data.json')
+    .then(res => res.json())
+    .then(data => {
+      this.setData(data);
+    });
   }
 
   setData(data) {
@@ -30,7 +27,7 @@ class App extends Component {
       users: {}
     };
     const { groups, messages, users } = newData;
-    
+
     data.forEach(d => {
       if (!groups[d.group_id]) {
         groups[d.group_id] = {
@@ -43,7 +40,6 @@ class App extends Component {
           groups[d.group_id].user_id.push(d.user.id);
         }
       }
-
       messages[d.message.id] = {
         group: d.group_id,
         by: d.user.id,
@@ -72,7 +68,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App"> 
+        <div className="App">
           <Switch>
             <Route exact path="/" component={ChatList} />
             <Route path="/:group_id" component={MessageList} />

@@ -6,7 +6,7 @@ class Group extends Component {
   calculateDate(msgDateISO) {
     const yesterdayMs = new Date().getTime() - (24 * 60 * 60 * 1000);
     const yesterday = moment(new Date(yesterdayMs).toISOString()).format().slice(0, 10);
-    const today = moment(new Date().toISOString()).format().slice(0, 10);    
+    const today = moment(new Date().toISOString()).format().slice(0, 10);
     const msgDate = moment(msgDateISO).format().slice(0, 10);
     const msgLocalDate = moment(msgDateISO).format();
     if (msgDate === today) {
@@ -22,11 +22,11 @@ class Group extends Component {
 
   render() {
     const { groupList } = this.props;
-    
+
     return (
       <div className="Group">
         <div className="Group-img">
-          <img src={groupList.group_photo}/>
+          <img src={groupList.group_photo} alt="" />
         </div>
         <div className="Group-content">
           <div>{groupList.group_name}</div>

@@ -1,9 +1,7 @@
 import * as types from '../actions/actionTypes';
 import moment from 'moment';
 
-const initialState = {};
-
-export default (state = initialState, action) => {
+export default (state = {}, action) => {
   const { groups, messages, users, groupId } = action;
   switch(action.type) {
     case types.SHOW_GROUP_LIST:
@@ -20,7 +18,7 @@ export default (state = initialState, action) => {
         groupOrder.push([id, groups[id].last_msg_id]);
       }
       groupOrder.sort((a, b) => b[1] - a[1]);
-      groupOrder = groupOrder.map(g => g[0]); 
+      groupOrder = groupOrder.map(g => g[0]);
 
       return ({
         groupList,
@@ -30,32 +28,31 @@ export default (state = initialState, action) => {
     case types.SHOW_GROUP_CHAT:
       let messageInfo = {};
       let userInfo = {};
-      
+
       groups[groupId].message_id.map(id => {
-        const localTime = moment(messages[id].sent_at).format().replace(/-/g, '.');;
+        const localTime = moment(messages[id].sent_at).format().replace(/-/g, '.');
         messageInfo[id] = {
           by: messages[id].by,
           sent_at: localTime,
           text: messages[id].text
-        }
+        };
       });
 
       groups[groupId].user_id.map(id => {
         userInfo[id] = {
           name: users[id].name,
           photo: users[id].photo_url
-        }
+        };
       });
 
       return ({
         groupName: groups[groupId].group_name,
-        groupIds: Object.keys(groups), // needed?
         messageIds: groups[groupId].message_id,
         messageInfo,
         userInfo
       });
 
-    default: 
+    default:
       return state;
-  } 
+  }
 }

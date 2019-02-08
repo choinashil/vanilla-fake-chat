@@ -7,7 +7,7 @@ class GroupList extends Component {
   componentDidMount() {
     this.props.showGroupList();
   }
-  
+
   render() {
     const { groupList, groupOrder } = this.props;
     return (

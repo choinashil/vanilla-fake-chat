@@ -2,36 +2,81 @@
   {
     "group_id": 1,
     "user": {"id": 1, "name": "나시루", "photo": "https://avatars3.githubusercontent.com/u/42081098?s=460&v=4"},
-    "message": {"id": 1, "text": "야간반 퇴근했습니답", "sent_at": "2019-01-19T19:47:03.575Z"}
+    "message": {"id": 1, "text": "안녕하세요 자바스크립트 가르쳐주시나요?", "sent_at": "2018-08-13T04:47:03.575Z"}
   },
   {
     "group_id": 1,
+    "user": {"id": 5, "name": "바닐라코딩", "photo": "https://ca.slack-edge.com/T4XBHDFMJ-U4Y1084UW-9aa19a4132e4-72"},
+    "message": {"id": 2, "text": "상담 한번 오시죠", "sent_at": "2018-08-13T05:15:03.575Z"}
+  },
+  {
+    "group_id": 2,
+    "user": {"id": 6, "name": "다운", "photo": "https://avatars1.githubusercontent.com/u/39936583?s=460&v=4"},
+    "message": {"id": 3, "text": "언니 저녁 언제 먹어요?", "sent_at": "2019-01-07T08:06:03.575Z"}
+  },
+  {
+    "group_id": 2,
+    "user": {"id": 1, "name": "나시루", "photo": "https://ca.slack-edge.com/T4XBHDFMJ-U4Y1084UW-9aa19a4132e4-72"},
+    "message": {"id": 4, "text": "지금?", "sent_at": "2019-01-07T08:09:03.575Z"}
+  },
+  {
+    "group_id": 2,
+    "user": {"id": 7, "name": "지희", "photo": "https://avatars3.githubusercontent.com/u/25738826?s=460&v=4"},
+    "message": {"id": 5, "text": "아빠곰?", "sent_at": "2019-01-07T08:12:03.575Z"}
+  },
+  {
+    "group_id": 2,
+    "user": {"id": 8, "name": "혜린", "photo": "https://avatars1.githubusercontent.com/u/38285577?s=460&v=4"},
+    "message": {"id": 6, "text": "👌🏼", "sent_at": "2019-01-07T08:15:03.575Z"}
+  },
+  {
+    "group_id": 3,
     "user": {"id": 1, "name": "나시루", "photo": "https://avatars3.githubusercontent.com/u/42081098?s=460&v=4"},
-    "message": {"id": 2, "text": "정리하고 나왔습니다~~", "sent_at": "2019-01-23T16:51:35.575Z"}
+    "message": {"id": 7, "text": "야간반 퇴근했습니답", "sent_at": "2019-01-19T19:47:03.575Z"}
   },
   {
-    "group_id": 1,
+    "group_id": 4,
+    "user": {"id": 1, "name": "나시루", "photo": "https://avatars3.githubusercontent.com/u/42081098?s=460&v=4"},
+    "message": {"id": 8, "text": "범석님 편의점 갔다올래요?", "sent_at": "2019-01-23T14:35:03.575Z"}
+  },
+  {
+    "group_id": 4,
+    "user": {"id": 9, "name": "범석", "photo": "https://avatars1.githubusercontent.com/u/36691543?s=460&v=4"},
+    "message": {"id": 9, "text": "콜", "sent_at": "2019-01-23T14:37:03.575Z"}
+  },
+  {
+    "group_id": 3,
+    "user": {"id": 1, "name": "나시루", "photo": "https://avatars3.githubusercontent.com/u/42081098?s=460&v=4"},
+    "message": {"id": 10, "text": "정리하고 나왔습니다~~", "sent_at": "2019-01-25T16:51:35.575Z"}
+  },
+  {
+    "group_id": 3,
     "user": {"id": 2, "name": "ken", "photo": "https://avatars1.githubusercontent.com/u/3277615?s=460&v=4"},
-    "message": {"id": 3, "text": "넵넵", "sent_at": "2019-01-23T16:53:51.575Z"}
+    "message": {"id": 11, "text": "넵넵", "sent_at": "2019-01-25T16:53:51.575Z"}
   },
   {
-    "group_id": 2,
+    "group_id": 5,
+    "user": {"id": 4, "name": "해동", "photo": "https://avatars3.githubusercontent.com/u/41662079?s=460&v=4"},
+    "message": {"id": 12, "text": "점심먹을거에요?", "sent_at": "2019-02-02T02:48:29.575Z"}
+  },
+  {
+    "group_id": 5,
     "user": {"id": 1, "name": "나시루", "photo": "https://avatars3.githubusercontent.com/u/42081098?s=460&v=4"},
-    "message": {"id": 4, "text": "sleep?", "sent_at": "2019-01-27T17:06:29.575Z"}
+    "message": {"id": 13, "text": "넵 곧 도착해요~", "sent_at": "2019-02-02T02:55:41.575Z"}
   },
   {
-    "group_id": 2,
+    "group_id": 6,
+    "user": {"id": 1, "name": "나시루", "photo": "https://avatars3.githubusercontent.com/u/42081098?s=460&v=4"},
+    "message": {"id": 14, "text": "sleep?", "sent_at": "2019-02-05T17:06:29.575Z"}
+  },
+  {
+    "group_id": 6,
     "user": {"id": 3, "name": "찬회", "photo": "https://avatars0.githubusercontent.com/u/39963468?s=460&v=4"},
-    "message": {"id": 5, "text": "nope", "sent_at": "2019-01-27T17:10:31.575Z"}
+    "message": {"id": 15, "text": "nope", "sent_at": "2019-02-05T17:10:31.575Z"}
   },
   {
-    "group_id": 1,
+    "group_id": 3,
     "user": {"id": 1, "name": "나시루", "photo": "https://avatars3.githubusercontent.com/u/42081098?s=460&v=4"},
-    "message": {"id": 6, "text": "야간반 퇴근했습니다~", "sent_at": "2019-02-01T17:32:29.575Z"}
-  },
-  {
-    "group_id": 1,
-    "user": {"id": 1, "name": "나시루", "photo": "https://avatars3.githubusercontent.com/u/42081098?s=460&v=4"},
-    "message": {"id": 7, "text": "야간반 퇴근했습니다~", "sent_at": "2019-02-15T17:32:29.575Z"}
+    "message": {"id": 16, "text": "문닫고 나왔습니다~", "sent_at": "2019-02-07T16:51:35.575Z"}
   }
 ]

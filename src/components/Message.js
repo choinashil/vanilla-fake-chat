@@ -15,11 +15,11 @@ class Message extends Component {
 
   render() {
     const { messageInfo, userInfo, userCount } = this.props;
-    
+
     return (
       <div className={messageInfo.by === 1 ? "Message right" : "Message left"}>
         <div className="Message-user-photo">
-          <img src={userInfo.photo} />
+          <img src={userInfo.photo} alt="" />
         </div>
         <div className="Message-text">
           <div>

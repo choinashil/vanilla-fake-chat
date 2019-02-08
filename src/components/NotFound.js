@@ -1,12 +1,9 @@
-import React, { Component } from 'react';
-import './NotFound.scss';
+import React from 'react';
 
-class NotFound extends Component {
-  render() {
-    return (
-        <div>404</div>
-    );
-  }
+function NotFound () {
+  return (
+      <div>404</div>
+  );
 }
 
 export default NotFound;

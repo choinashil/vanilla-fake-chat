@@ -35,7 +35,7 @@ class GroupChat extends Component {
       by: 1,
       text: this.state.inputValue,
       sent_at: new Date().toISOString(),
-    }
+    };
     groups[this.groupId].message_id.push(newMsgId);
     localStorage.setItem('data', JSON.stringify(data));
 
@@ -45,7 +45,7 @@ class GroupChat extends Component {
 
   validateData(id, index) {
     const { messageIds, messageInfo } = this.props;
-    const prevId = messageIds[index - 1]; 
+    const prevId = messageIds[index - 1];
     if (index === 0) return true;
     return (messageInfo[id].sent_at.slice(0, 10) !== messageInfo[prevId].sent_at.slice(0, 10)) ? true : false;
   }
@@ -66,21 +66,21 @@ class GroupChat extends Component {
             const dayChanged = this.validateData(id, index);
             return (
               <Fragment key={index}>
-                {dayChanged ? 
+                {dayChanged ?
                   <div className="GroupChat-date">
                     <div>{messageInfo[id].sent_at.slice(0, 10)}</div>
-                  </div> 
+                  </div>
                 : ''}
-                <Message 
+                <Message
                   userCount={Object.keys(userInfo).length}
-                  messageInfo={messageInfo[id]} 
-                  userInfo={userInfo[messageInfo[id].by]} 
-                />  
-              </Fragment>); 
+                  messageInfo={messageInfo[id]}
+                  userInfo={userInfo[messageInfo[id].by]}
+                />
+              </Fragment>);
           })}
         </div>
         <div className="GroupChat-footer">
-          <input type="text" 
+          <input type="text"
             placeholder="Send message"
             value={this.state.inputValue}
             onChange={this.changeInput.bind(this)}
