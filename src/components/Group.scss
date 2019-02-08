@@ -1,0 +1,53 @@
+.Group {
+    display: flex;
+    width: 100%;
+    // padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    // padding: 15px 20px;
+    box-sizing: border-box;
+    position: relative;
+    &-img {
+        width: 22%;
+        flex-shrink: 0;
+        // border: 1px solid #bebebe;
+        // border-radius: 50%;
+        // overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &-content {
+        display: flex;
+        // background-color: pink;
+        flex-direction: column;
+        justify-content: center;
+        // border: 1px solid red;
+        width: 75%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        > div:nth-child(1) {
+            font-weight: 700;
+            font-size: 19px;
+            margin-bottom: 3px;
+            color: #424562;
+        }
+        > div:nth-child(2) {
+            // border: 1px solid blue;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-wrap: normal;
+            font-size: 16px;
+            color: #929196;
+        }
+    }
+    &-date {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: #bebebe;
+        // background-color: purple;
+    }
+}

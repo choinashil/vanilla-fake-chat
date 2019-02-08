@@ -1,0 +1,34 @@
+.GroupList {
+    // width: 28%;
+    width: 445px;
+    height: 85%;
+    border: 1px solid #6a737d; 
+    box-sizing: border-box;
+    &-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 12%;
+        background-color: #3E3F4D;
+        color: #CDCDD2;
+        font-size: 24px;
+    }
+    &-add {
+        height: 12%;
+        background-image: linear-gradient(to right, #9183FE, #72a6fe);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #f9f9fa;
+        font-size: 23px;
+    }
+    &-list {
+        height: 76%;
+        // background: pink;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
