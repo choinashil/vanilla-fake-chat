@@ -2,7 +2,7 @@
 
 React & Redux를 이용해서 만든 가짜 채팅 어플리케이션입니다.
 
-<img src="./fake-chat.gif" alt="example">
+<img src="./fake-chat.gif" width="300px" alt="example">
 
 ## Setup
 
